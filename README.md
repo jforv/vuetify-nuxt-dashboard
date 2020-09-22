@@ -1,6 +1,6 @@
 # Nuxt Vuetify dashboard
 
-### Nuxt version of creative Tim vuetify dashboard
+### Nuxt version of [Creative Tim](https://github.com/creativetimofficial/vuetify-material-dashboard/tree/master) vuetify dashboard
 
 ## Build Setup
 
