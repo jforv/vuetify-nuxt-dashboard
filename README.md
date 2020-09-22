@@ -1,4 +1,6 @@
-# sadisv2
+# Nuxt Vuetify dashboard
+
+### Nuxt version of creative Tim vuetify dashboard
 
 ## Build Setup
 
