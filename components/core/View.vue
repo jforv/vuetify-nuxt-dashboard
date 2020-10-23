@@ -1,7 +1,6 @@
 <template>
-  <v-main>
+  <v-main class="my-8">
     <nuxt />
-    <dashboard-core-footer />
   </v-main>
 </template>
 
@@ -9,8 +8,6 @@
 export default {
   name: 'DashboardCoreView',
 
-  components: {
-    DashboardCoreFooter: () => import('./Footer'),
-  },
+  components: {},
 }
 </script>

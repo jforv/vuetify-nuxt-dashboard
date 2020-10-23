@@ -1,11 +1,24 @@
 <template>
-  <v-app-bar id="app-bar" absolute app color="transparent" flat height="75">
-    <v-btn class="mr-3" elevation="1" fab small @click="setDrawer(!drawer)">
+  <v-app-bar
+    id="app-bar"
+    absolute
+    app
+    color="blue darken-3"
+    dark
+    flat
+    elevate-on-scroll
+  >
+    <!-- <v-btn class="mr-3" elevation="1" fab small @click="setDrawer(!drawer)">
       <v-icon v-if="value"> mdi-view-quilt </v-icon>
 
       <v-icon v-else> mdi-dots-vertical </v-icon>
-    </v-btn>
-
+    </v-btn> -->
+    <v-app-bar-nav-icon @click.stop="setDrawer(!drawer)"></v-app-bar-nav-icon>
+    <!-- <v-toolbar-title style="width: 300px" class="ml-0 pl-9">
+      <nuxt-link to="/" class="text-link hidden-sm-and-down">
+        <b>Sadis Valencio</b>
+      </nuxt-link>
+    </v-toolbar-title> -->
     <v-toolbar-title
       class="hidden-sm-and-down font-weight-light"
       v-text="$route.name"
@@ -14,7 +27,7 @@
     <v-spacer />
 
     <!-- :label="$t('search')" -->
-    <v-text-field
+    <!-- <v-text-field
       :label="'search'"
       color="secondary"
       hide-details
@@ -25,13 +38,13 @@
           <v-icon>mdi-magnify</v-icon>
         </v-btn>
       </template>
-    </v-text-field>
+    </v-text-field> -->
 
     <div class="mx-3" />
 
-    <v-btn class="ml-2" min-width="0" text to="/">
+    <!-- <v-btn class="ml-2" min-width="0" text to="/">
       <v-icon>mdi-view-dashboard</v-icon>
-    </v-btn>
+    </v-btn> -->
 
     <v-menu
       bottom
@@ -42,7 +55,7 @@
     >
       <template v-slot:activator="{ attrs, on }">
         <v-btn class="ml-2" min-width="0" text v-bind="attrs" v-on="on">
-          <v-badge color="red" overlap bordered>
+          <v-badge color="red" overlap>
             <template v-slot:badge>
               <span>5</span>
             </template>
@@ -135,3 +148,9 @@ export default {
   },
 }
 </script>
+<style lang="scss">
+.text-link {
+  color: inherit;
+  text-decoration: none;
+}
+</style>

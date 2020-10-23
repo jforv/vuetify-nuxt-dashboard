@@ -18,7 +18,7 @@
     "lodash": "^4.17.20",
     "node-sass": "^4.14.1",
     "nuxt": "^2.14.5",
-    "sass-loader": "^10.0.2",
+    "sass-loader": "7.1.0",
     "vee-validate": "^3.4.0",
     "vue-chartist": "^2.3.1"
   },

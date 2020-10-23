@@ -1,42 +1,45 @@
 <template>
-  <v-navigation-drawer
-    id="core-navigation-drawer"
+  <!-- :dark="barColor !== 'rgba(228, 226, 226, 1), rgba(255, 255, 255, 0.7)'" -->
+  <!-- :src="barImage" -->
+  <!-- <v-navigation-drawer
     v-model="drawer"
-    :dark="barColor !== 'rgba(228, 226, 226, 1), rgba(255, 255, 255, 0.7)'"
     :expand-on-hover="expandOnHover"
     :right="$vuetify.rtl"
-    :src="barImage"
     mobile-breakpoint="960"
     app
     width="260"
     v-bind="$attrs"
+  > -->
+  <v-navigation-drawer
+    v-model="setDrawer"
+    :clipped="$vuetify.breakpoint.lgAndUp"
+    app
   >
-    <template v-slot:img="props">
+    <!-- <template v-slot:img="props">
       <v-img :gradient="`to bottom, ${barColor}`" v-bind="props" />
-    </template>
+    </template> -->
 
-    <v-divider class="mb-1" />
+    <!-- <v-divider class="mb-1" /> -->
 
-    <v-list dense nav>
+    <!-- <v-list dense nav color="blue darken-3" height="55" dark>
       <v-list-item>
         <v-list-item-avatar class="align-self-center" color="white" contain>
-          <v-img
+        <v-img
             src="https://demos.creative-tim.com/vuetify-material-dashboard/favicon.ico"
             max-height="30"
-          />
+          /> -
         </v-list-item-avatar>
 
         <v-list-item-content>
-          <v-list-item-title class="display-1" v-text="profile.title" />
+          <v-list-item-title class="title text-center" v-text="profile.title" />
         </v-list-item-content>
       </v-list-item>
-    </v-list>
+    </v-list> -->
 
-    <v-divider class="mb-2" />
+    <!-- <v-divider class="mb-2" /> -->
 
     <v-list expand nav>
-      <!-- Style cascading bug  -->
-      <!-- https://github.com/vuetifyjs/vuetify/pull/8574 -->
+      <!-- Style cascading bug https://github.com/vuetifyjs/vuetify/pull/8574 -->
       <div />
 
       <template v-for="(item, i) in computedItems">
@@ -94,12 +97,12 @@ export default {
       {
         title: 'rtables',
         icon: 'mdi-clipboard-outline',
-        to: '/tables/regular-tables',
+        to: '/tables/RegularTables',
       },
       {
         title: 'typography',
         icon: 'mdi-format-font',
-        to: '/components/typography',
+        to: '/component/Typography',
       },
       {
         title: 'icons',
@@ -135,7 +138,7 @@ export default {
     profile() {
       return {
         avatar: true,
-        title: 'avatar',
+        title: 'Sadis Valencio',
       }
     },
   },

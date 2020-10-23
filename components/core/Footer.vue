@@ -1,5 +1,5 @@
 <template>
-  <v-footer id="dashboard-core-footer">
+  <v-footer id="dashboard-core-footer" app inset>
     <v-container>
       <v-row align="center" no-gutters>
         <v-col
